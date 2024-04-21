@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: Poppins, sans-serif;
+}
+.posicao{ /* Centraliza div*/
+    display: grid; 
+    place-items: center;
+}
+.form-box{/*alterações gerais em todos campos*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    z-index: 2;
+}
+.conteiner-login{ /*formulario de Login*/
+    position: absolute;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.conteiner-registro{ /*Fomulario de Registro*/
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.conteiner-redefinir{ /*Formulario de Recuperação de senha etapa 1*/
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+.conteiner-redefinir-dois{ /*Formulario de Recuperação de senha etapa 2*/
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+
+.topo span{ /*Texto menor no topo*/
+    color: #fff;
+    font-size: small;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.topo span a{ /*href no topo*/
+    font-weight: 500;
+    color: #fff;
+    margin-left: 5px;
+}
+header{ /*Palavra chave no topo, abaixo do span*/
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+.dois-form{ /*Contem todos inputs*/
+    gap: 10px;/*Distancia entre eles*/
+}
+.input-campo{/* Personalizacão Inputs*/
+    font-size: 15px;
+    background:rgba(255, 255, 255, 0.3);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline:none ;
+    transition: .2s ease;
+}
+.input-campo:hover, .input-campo:focus{/*Transição ao clicar nos inputs*/
+    background: rgba(255, 255, 255, 0.25); 
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.input-box i{/*Personalização dos Icons*/
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+.enviar{/*Personalização do botão enviar*/
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 111%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.enviar:hover{/*Transição do botão enviar ao passar o cursor em cima*/
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.25);
+}
+.col{/*Div com links abaixo do botão enviar*/
+    color:#fff;
+    font-size: small;
+    margin-top: 10px;
+}
+.col-1 label a{ /*Personalização do Esqueci minha Senha*/
+    text-decoration: none;
+    color: #fff;
+}
+.col-1 label a:hover{
+    color:rgba(255, 255, 255, 0.7);
+    transition: .5s ease-in-out;
+}
+
+.topo i{/*Icon "Voltar" no fomulario de Recuperação.*/
+    position: absolute;
+    top: 15px;
+    font-size:40px;
+    color: #fff;
+}
+.img{ /*Logo*/
+    position: absolute;
+    background:rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.25);
+    
+}
+
+
