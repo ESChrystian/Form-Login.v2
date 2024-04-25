@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script href="login.js"></script>
+    <style>
+        body {
+            background-image: url('imagens/imagemdefundo.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    </div>
+    <div class="posicao">
+        <!------------------------------------------------- Sign Up ------------------------------------------------------->
+        <div class="form-box">
+            <div class="conteiner-registro" id="registro">
+                <div class="topo">
+                    <span>Possui uma Conta? <a href="#" onclick="Login()">Login</a></span>
+                    <header>Cadastrar-se</header>
+                </div>
+                <div class="dois-form">
+                    <div class="input-box">
+                        <input type="text" id="nome" class="input-campo" placeholder="Nome">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="sobrenome" class="input-campo" placeholder="Sobrenome">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="email-cad" class="input-campo" placeholder="Email">
+                        <i class="bx bx-envelope"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" id="senha-cad" class="input-campo" placeholder="Senha">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="submit" class="enviar" value="Registrar" onclick="bloqCad()">
+                    </div>
+                    
+                </div>
+            </div>
+            <!------------------------------------- Sign In ------------------------------------------------------->
+            <div class="conteiner-login" id="login">
+                <div class="topo">
+                    <span>Não possui uma Conta? <a href="#" onclick="Registro()">Cadastrar-se</a></span>
+                    <header>Conecte-se</header>
+                </div>
+                <div class="dois-form">
+
+                    <div class="input-box" id="input-box">
+                        <input type="email" id="email" class="input-campo" placeholder="Username ou Email">
+                        <i class="bx bx-user"></i>
+
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" id="senha" class="input-campo" placeholder="Senha">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="submit" class="enviar" value="Inscrever-se" onclick="bloqLogin()">
+                    </div>
+                    <div class="col">
+                        <div class="col-1">
+                            <label><a href="#" onclick="Redefinir()">Esqueceu sua senha</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------------------------------------- Redefinir Senha - 1° Etapa ---------------------------------------------------------------------->
+            <div class="conteiner-redefinir" id="recuperar">
+                <div class="topo">
+                    <header>Redefinir Senha</header>
+                    <a href="#" onclick="Login()"><i class='bx bx-log-out-circle'></i></a>
+                </div>
+                <div class="dois-form">
+
+                    <div class="input-box" id="input-box">
+                        <input type="email" id="email-redefinir" class="input-campo" placeholder="Email">
+                        <i class="bx bx-user"></i>
+
+                    </div>
+
+
+
+                    <div class="input-box">
+                        <input type="submit" class="enviar" value="Próximo" onclick="bloqRedefinir()"
+                            ondblclick="RedefinirDois()">
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------------------Redefinir Senha - 2° Etapa  --------------------------------------------------------->
+            <div class="conteiner-redefinir-dois" id="recuperar-dois">
+                <div class="topo">
+                    <header>Redefinir Senha</header>
+                    <a href="login.html"><i class='bx bx-log-out-circle'></i></a>
+                    <span>Um email de verificação foi enviado para este endereço de email, por favor verifique.</span>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--------------------------- JavaScript ----------------------------------------------------->
+
+    <script>
+        /*Termos técnicos:
+        bloq= bloquear
+        Registro = Fomulario de Cadastro
+        Redefinir= Fomulario de recuperação de senha
+        */
+
+        /* id de cada area do formulário*/
+        var w = document.getElementById("recuperar-dois")
+        var x = document.getElementById("login");
+        var y = document.getElementById("registro");
+        var z = document.getElementById("recuperar");
+
+
+        /* função tipo carrosel, movendo um fomulário de fora da tela para o centro */
+        function Login() {
+            x.style.left = "100px";
+            y.style.right = "-520px";
+            z.style.right = "-520px";
+            w.style.right = "-520px";
+        }
+        function Registro() {
+            x.style.left = "-590px";
+            y.style.right = "90px";
+        }
+        function Redefinir() {
+            x.style.left = "-590px";
+
+            z.style.right = "90px";
+        }
+        function RedefinirDois() {
+            z.style.left = "-590px";
+            w.style.right = "90px";
+        }
+
+
+        /* Função de preenchimento obrigatório, usando if, else e alert
+        */
+        function bloqLogin() {
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value;
+            if (email == "") {
+                alert("Preencha os campos.");
+
+            }
+            else if (senha == "") {
+                alert("Preencha os campos.");
+            }
+
+        }
+        function bloqRedefinir() {
+            let email = document.getElementById("email-redefinir").value;
+            if (email == "") {
+                alert("Preencha os campos.");
+
+            }
+
+
+        }
+
+        function bloqCad() {
+            let nome = document.getElementById("nome").value;
+            let sobrenome = document.getElementById("sobrenome").value
+            let email = document.getElementById("email-cad").value;
+            let senha = document.getElementById("senha-cad").value;
+            if (nome == "") {
+                alert("Preencha os campos.");
+
+            } else if (sobrenome == "") {
+                alert("Preencha os campos.");
+            } else if (email == "") {
+                alert("Preencha os campos.");
+            } else if (senha == "") {
+                alert("Preencha os campos.");
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
