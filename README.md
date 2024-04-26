@@ -8,7 +8,7 @@
 * [A Importância da Tela de Login](#a-importância-da-tela-de-login)
 * [Contexto do Problema](#contexto-do-problema)
 * [Solução do Projeto](#projeto-solução)
-* [Tecnologia Utilizada](#tecnologias)
+* [Tecnologias Utilizadas](#tecnologias)
 * [Desenvolvedor](#tecnologias)
 
 #### 🛠️ De uma olhada em meu site.
