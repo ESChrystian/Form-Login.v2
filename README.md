@@ -21,7 +21,7 @@ Fonte: [imasters](https://imasters.com.br/desenvolvimento/a-importancia-da-tela-
 
 Todos nós já estivemos nesta situação: projeto novo, aplicativo novo. E uma tela de login.
 Muitas vezes, é nesse momento que nos questionamos sobre as decisões mais básicas em relação à arquitetura e à organização do código que vamos construir a partir desse momento. Se pararmos para pensar, a tela de login agrega e unifica várias faces do desenvolvimento de software: conexão com uma API, armazenamento (seguro) de informações do usuário, validação de dados, interação com o usuário e até bons cenários de testes.
-
+#
 ### Contexto do Problema
 A empresa está contratando um programador(a) treinee, para essa vaga há um primeiro desafio, esse desafio está sendo para selecionar o canditado/a que ocupara a vaga, o desafio consiste em:
 * Criar ou utilizar um projeto já existente;
@@ -30,7 +30,7 @@ A empresa está contratando um programador(a) treinee, para essa vaga há um pri
 ### Projeto (Solução):
 
 Utilizando HTML, CSS JavaScript, a interface válida os campos de acesso. Por exemplo, caso o usuário deixe de preencher algum campo, o site deverá informa ao usuário que ele deve responder o campos não preenchidos. O projeto também será concluído de forma comentada através do README. Por final a postagem do projeto no [linkedin](https://www.linkedin.com/in/chrystianalmeida-coder/) e [GitHub](https://github.com/ESChrystian/Form-Login.v2).
-
+#
 ### Desenvolvedor:
 
 | <img loading="lazy" src="https://github.com/ESChrystian/site-de-produtos/assets/140809945/6a4fa894-a625-424a-80b0-b01d0a8c0bb5" width=130><br> <a href="https://github.com/ESChrystian">Chrystian Almeida Silva</a> |
